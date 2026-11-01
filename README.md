@@ -1,7 +1,7 @@
-## Use Case Diagram
+## usecaseDiagram
 
 ```mermaid
-useCaseDiagram
+usecaseDiagram
     actor User as "User / Admin"
     
     package "SLA Breach Prediction System" {
@@ -21,13 +21,14 @@ useCaseDiagram
     User --> (View System Design & Requirements)
     
     note left of (Upload & Validate Dataset)
-      Includes:
-      • Validate CSV Schema
-      • Auto-compute Columns
-      end note
+        Includes:
+        • Validate CSV Schema
+        • Auto-compute Columns
+    end note
     
     note right of (Predict SLA Breach Risk)
-      Includes:
-      • Load Trained Model
-      • Return Risk Level
-      end note
+        Inputs:
+        • Service & Priority
+        • Office & Details
+        Output: Risk Level %
+    end note
