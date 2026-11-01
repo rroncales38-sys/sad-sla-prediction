@@ -1,21 +1,21 @@
 ## 📊 Use Case Diagram
 
 ```mermaid
-usecaseDiagram
-    actor User
+graph TB
+    User[User / Admin]
     
-    package "SLA Breach Prediction System" {
-        (Upload & Validate Dataset)
-        (View Data Preview & Info)
-        (Explore Data Visualizations)
-        (Predict SLA Breach Risk)
-        (View Performance Dashboard)
-        (View System Design & Requirements)
-    }
+    User -->|uses| UC1
+    User -->|views| UC2
+    User -->|explores| UC3
+    User -->|runs| UC4
+    User -->|checks| UC5
+    User -->|reviews| UC6
     
-    User --> (Upload & Validate Dataset)
-    User --> (View Data Preview & Info)
-    User --> (Explore Data Visualizations)
-    User --> (Predict SLA Breach Risk)
-    User --> (View Performance Dashboard)
-    User --> (View System Design & Requirements)
+    subgraph SLA_Breach_Prediction_System
+        UC1[Upload & Validate Dataset]
+        UC2[View Data Preview & Info]
+        UC3[Explore Data Visualizations]
+        UC4[Predict SLA Breach Risk]
+        UC5[View Performance Dashboard]
+        UC6[View System Design & Requirements]
+    end
